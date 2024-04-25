@@ -9,4 +9,11 @@ const UserSchema = new mongoose.Schema({
     }
 });
 export const UserModel = mongoose.model('User', UserSchema);
+export const getUsers = () => UserModel.find();
+export const getUserByEmail = (email) => UserModel.findOne({ email });
+export const getUserBySessionToken = (sessionToken) => UserModel.findOne({ 'auth.sessionToken': sessionToken });
+export const getUserById = (id) => UserModel.findById(id);
+export const createUser = (user) => new UserModel(user).save().then((user) => user.toObject());
+export const deleteUserById = (id) => UserModel.findByIdAndDelete(id);
+export const updateUserById = (id, user) => UserModel.findByIdAndUpdate(id, user);
 //# sourceMappingURL=Users.js.map
