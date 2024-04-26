@@ -1,4 +1,4 @@
-import express from "express";
+import express, {Response, Request} from "express";
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import dotenv from "dotenv";
@@ -22,10 +22,11 @@ app.use("/api",routes)
 // const port = process.env.APP_POR
 const port = process.env.PORT
 const dbUri = process.env.DB_URI
-
+app.get('/check', (req:Request,res:Response)=> res.status(200).send("Hello")) 
+app.get('/', (req:Request,res:Response)=> res.status(200).send("Hello")) 
 app.listen(port, () => { 
   console.log("Server running at port: ", port); 
-}).on("error", (error) => {
+}).on("error", (error: { message: string | undefined; }) => {
   throw new Error(error.message);
 });
 
