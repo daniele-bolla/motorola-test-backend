@@ -37,10 +37,9 @@ If running on your localhost baseURl= http://localhost:<YOUR_PORT or 80 by defau
          email:"", password:""
     }```
 
-- List Users  GET `{baseURl}/api/users`
-
+- List Users  GET `{baseURl}/api/users`  accessible only With Authentication
 - Get User by id  GET `{baseURl}/api/users/:id` accessible only With Authentication
-- Delete User by id  DELETE `{baseURl}/api/users/:id` accessible only With Authentication a user can only delete himself
+- Delete User by id  DELETE `{baseURl}/api/users/:id` accessible only With Authentication | a user can only delete himself
 - Update User by id  PATCH `{baseURl}/api/users/:id` with Body ```{
         usernam:"", email:"", password:""
     }``` accessible only With Authentication
