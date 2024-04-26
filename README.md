@@ -22,21 +22,6 @@ npm run dev
 ```sh
 npm run build
 ```
-
-### Lint with [ESLint](https://eslint.org/)
-
 ```sh
-npm run lint
-```
-   
-   ```shell
-   npm install
-    ```
-    If you have Docker installed you can use 
-       ```shell
-   docker-compose up -d
-    ```
-#Dev mode
-   ```shell
-  npm run dev
+npm run start
 ```
