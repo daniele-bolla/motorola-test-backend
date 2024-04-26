@@ -20,7 +20,7 @@ app.use("/api",routes)
 
 
 // const port = process.env.APP_POR
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 80
 const dbUri = process.env.DB_URI || "mongodb+srv://bolladaniele:GdAgTgsffT75jE4I@cluster0.vdzprnw.mongodb.net/motorola-test-db"
 app.get('/check', (req:Request,res:Response)=> res.status(200).send("Hello")) 
 app.get('/', (req:Request,res:Response)=> res.status(200).send("Hello")) 
