@@ -5,9 +5,9 @@
   "main": "src/index.ts",
   "type": "module",
   "scripts": {
-    "build": "npx tsc src/index.ts",
+    "build": "npx tsc",
     "dev": "tsc -w & nodemon dist/index.js",
-    "start": "node dist/index.ts"
+    "start": "node dist/index.js"
   },
   "author": "daniele-bolla <bolladaniele@gmail.com> (https://daniele-bolla.github.io/)",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
+    "crypto": "^1.0.1",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-validation": "^4.1.0",
