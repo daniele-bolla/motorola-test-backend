@@ -1,6 +1,6 @@
 import crypto from "crypto"
 
-const SECRET = process.env.SECRET || ""
+const SECRET = process.env.SECRET || "danielemotorolatestbackend"
 
 export const random = ()=> crypto.randomBytes(128).toString('base64');
 export const authentication = (salt:string|null|undefined, password:string)=>{

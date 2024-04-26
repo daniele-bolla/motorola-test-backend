@@ -20,8 +20,8 @@ app.use("/api",routes)
 
 
 // const port = process.env.APP_POR
-const port = process.env.PORT
-const dbUri = process.env.DB_URI
+const port = process.env.PORT || 3000
+const dbUri = process.env.DB_URI || "mongodb+srv://bolladaniele:GdAgTgsffT75jE4I@cluster0.vdzprnw.mongodb.net/motorola-test-db"
 app.get('/check', (req:Request,res:Response)=> res.status(200).send("Hello")) 
 app.get('/', (req:Request,res:Response)=> res.status(200).send("Hello")) 
 app.listen(port, () => { 
@@ -31,4 +31,4 @@ app.listen(port, () => {
 });
 
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost:27017/motorola-test-db")
+mongoose.connect(dbUri)
